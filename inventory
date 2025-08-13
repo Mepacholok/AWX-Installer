@@ -1,0 +1,21 @@
+cat > inventory << 'EOF'
+localhost ansible_connection=local ansible_python_interpreter="/usr/bin/python3"
+
+[all:vars]
+dockerhub_base=ansible
+awx_task_hostname=awx
+awx_web_hostname=awxweb
+postgres_data_dir="/tmp/pgdocker"
+host_port=80
+host_port_ssl=443
+docker_compose_dir="/tmp/awxcompose"
+pg_username=awx
+pg_password=awxpass
+pg_database=awx
+pg_port=5432
+admin_user=admin
+admin_password=password
+create_preload_data=True
+secret_key=awxsecret
+project_data_dir=/tmp/projects
+EOF
